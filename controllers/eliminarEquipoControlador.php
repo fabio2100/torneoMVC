@@ -15,7 +15,6 @@
       require_once('../models/posiciones.php');
       $resultado = posicionesModel::eliminarEquipo($equipo);
       if ($resultado){
-        header('location:../public/index.php');
         ?>
         <script type="text/javascript">
           window.location.replace("../public/index.php");
