@@ -19,7 +19,6 @@
   }
   //Recuperamos la información del partido a modificar
   $idPartido = $_GET['id'];
-  echo "id" . $idPartido;
   $golA = $fila['golA'];
   $golB = $fila['golB'];
   $equipoA = $fila['equipoA'];
