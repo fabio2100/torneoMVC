@@ -15,10 +15,21 @@
       $golB = $fila['golB'];
     }
     if (is_null($golA) or is_null($golB)){
+      if(isset($_GET['desdeEliminarEquipo'])){
+        echo "sabes q ingreso";
+        header("location:../controllers/eliminarEquipoControlador.php?equipoAEliminar=".$_GET['desdeEliminarEquipo']);
+        //echo "location:../controllers/eliminarEquipoControlador.php?equipoAEliminar=".$_GET['desdeEliminarEquipo'];
+        return null;
+      }
       header("location:../controllers/partidosControlador.php");
     }else{
       $resultadoActualizaTabla = posicionesModel::actualizaTabla($equipoA,$equipoB,$golA,$golB,1);
       if ($resultadoActualizaTabla){
+        if (isset($_GET['desdeEliminarEquipo'])){
+          echo "sabes que también";
+          header("location:../controllers/eliminarEquipoControlador.php?equipoAEliminar=".$_GET['desdeEliminarEquipo']);
+          return null;
+        }
         header("location:../controllers/partidosControlador.php");
       }else{
         echo "Ocurrió un error al actualizar la tabla";

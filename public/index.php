@@ -16,10 +16,11 @@
 </head>
 <body>
   <div class="row">
-    <a href="../views/agregarPartido.php" class="p-4 btn btn-primary col-xs-12 col-sm-12 col-md-4 col-lg-4">Agregar partido</a>
-    <a href="../controllers/partidosControlador.php" class="p-4 btn btn-danger col-xs-12 col-sm-12 col-md-4 col-lg-4">Eliminar o Modificar partido</a>
-    <a href="../controllers/posicionesControlador.php" class="p-4 btn btn-warning col-xs-12 col-sm-12 col-md-4 col-lg-4">Mostrar tabla</a>
-    <a href="../views/agregarEquipo.php" class="p-4 btn btn-primary col-xs-12 col-sm-12 col-md-4 col-lg-4">Agregar equipo</a>
+    <a href="../views/agregarPartido.php" class="p-4 btn btn-primary col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4">Agregar partido</a>
+    <a href="../controllers/partidosControlador.php" class="p-4 btn btn-danger col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4">Eliminar o Modificar partido</a>
+    <a href="../controllers/posicionesControlador.php" class="p-4 btn btn-warning col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4">Mostrar tabla</a>
+    <a href="../views/agregarEquipo.php" class="p-4 btn btn-primary col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4">Agregar equipo</a>
+    <a href="../controllers/eliminarEquipoControlador.php" class="p-4 btn btn-dark col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4">Eliminar equipo</a>
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -49,5 +49,6 @@
       echo "Ha ocurrido un error al eliminar el registro";
       return false;
     }
-    }
+  }
+
 ?>

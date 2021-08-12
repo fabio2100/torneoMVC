@@ -25,6 +25,15 @@
       return $this -> partido;
     }
 
+    public function getPartidosEquipo($equipo){
+      $consulta = $this -> db -> query("SELECT * FROM partidos WHERE equipoA = '$equipo' OR equipoB = '$equipo'");
+      while($fila = $consulta -> fetch(PDO::FETCH_ASSOC)){
+        $this -> partido[] = $fila;
+      }
+
+      return $this -> partido;
+    }
+
     public function nuevoPartido($dia=NULL,$hora=NULL,$fecha=NULL,$lugar=null,$equipoA,$equipoB,$golA=null,$golB=null){
       try {
         $consulta = "INSERT INTO partidos (dia,hora,fecha,lugar,equipoA,equipoB,golA,golB) VALUES (:dia,:hora,:fecha,:lugar,:equipoA,:equipoB,:golA,:golB)";

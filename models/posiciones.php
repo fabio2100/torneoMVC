@@ -42,6 +42,21 @@
       }
     }
 
+    public static function eliminarEquipo($nombre){
+      try {
+        require_once('conexion.php');
+        $conexion = Conectar::conexion();
+        $consulta = "DELETE FROM posiciones WHERE equipo = :equipo";
+        $resultadoConsulta = $conexion -> prepare($consulta);
+        $resultadoConsulta -> execute(array(":equipo"=>$nombre));
+        $resultadoConsulta -> closeCursor();
+        return true;
+      } catch (Exception $e) {
+        echo $e->getMessage() . $e -> getLine();
+        return false;
+      }
+    }
+
     public static function actualizaTabla($equipoA,$equipoB,$golA,$golB,$insODel=0){
       
       if ($golA > $golB){
