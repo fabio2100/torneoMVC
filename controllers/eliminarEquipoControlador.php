@@ -16,6 +16,11 @@
       $resultado = posicionesModel::eliminarEquipo($equipo);
       if ($resultado){
         header('location:../public/index.php');
+        ?>
+        <script type="text/javascript">
+          window.location.replace("../public/index.php");
+        </script>
+        <?php
       }else{
         echo "Ha ocorrido un error";
       }
